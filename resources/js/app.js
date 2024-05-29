@@ -1,16 +1,13 @@
 import "./bootstrap";
 import "../css/app.css";
-import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
-
 import "../src/vendor/jquery/dist/jquery.min.js";
 import "../src/vendor/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../src/vendor/js-cookie/js.cookie.js";
-// import "../src/vendor/jquery.scrollbar/jquery.scrollbar.min.js";
+//  import "../src/vendor/jquery.scrollbar/jquery.scrollbar.min.js";
 //  import "../src/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js";
-
 import "../src/vendor/chart.js/dist/Chart.min.js";
 import "../src/vendor/chart.js/dist/Chart.extension.js";
-//  import "../src/js/argon.min.js?v=1.2.1";
+//  import "../src/js/argon.min.js";
 import "../src/js/demo.min.js";
 
 import { createApp, h } from "vue";
@@ -37,5 +34,3 @@ createInertiaApp({
         color: "#4B5563",
     },
 });
-
-
