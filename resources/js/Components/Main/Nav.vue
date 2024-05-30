@@ -346,8 +346,8 @@
                                     />
                                 </span>
                                 <div class="media-body ml-2 d-none d-lg-block">
-                                    <span class="mb-0 text-sm font-weight-bold"
-                                        > {{ $page.props.auth.user.name }}</span
+                                    <span class="mb-0 text-sm font-weight-bold">
+                                        {{ $page.props.auth.user.name }}</span
                                     >
                                 </div>
                             </div>
@@ -373,14 +373,15 @@
                                 <span>Support</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a
-                                href="#"
-                                @click.prevent="logout"
+                            <Link
+                                :href="route('logout')"
+                                method="post"
+                                as="button"
                                 class="dropdown-item"
                             >
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
-                            </a>
+                            </Link>
                         </div>
                     </li>
                 </ul>
@@ -391,20 +392,6 @@
 
 <script setup>
 import { Link } from "@inertiajs/vue3";
-import { router } from "@inertiajs/vue3";
-import { ref } from "vue";
-
-const logout = () => {
-    router.post(
-        route("logout"),
-        {},
-        {
-            onFinish: () => {
-                router.visit("/login");
-            },
-        }
-    );
-};
 </script>
 
 <style lang="scss" scoped></style>

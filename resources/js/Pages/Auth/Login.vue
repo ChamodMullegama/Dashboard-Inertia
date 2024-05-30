@@ -26,396 +26,202 @@ const submit = () => {
         onFinish: () => form.reset("password"),
     });
 };
+
+import AuthLayout from "@/Layouts/Auth.vue";
 </script>
 
 <template>
     <Head title="Login" />
-    <body class="bg-default">
-        <noscript>
-            <iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
-                height="0"
-                width="0"
-                style="display: none; visibility: hidden"
-            ></iframe>
-        </noscript>
-
-        <nav
-            id="navbar-main"
-            class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light"
-        >
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img
-                        src="../../../src/img/brand/white.png"
-                        alt="Brand logo"
-                    />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbar-collapse"
-                    aria-controls="navbar-collapse"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                    class="navbar-collapse navbar-custom-collapse collapse"
-                    id="navbar-collapse"
-                >
-                    <div class="navbar-collapse-header">
-                        <div class="row">
-                            <div class="col-6 collapse-brand">
-                                <a href="#">
-                                    <img
-                                        src="../../../src/img/brand/blue.png"
-                                        alt="Brand logo"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-6 collapse-close">
-                                <button
-                                    type="button"
-                                    class="navbar-toggler"
-                                    data-toggle="collapse"
-                                    data-target="#navbar-collapse"
-                                    aria-controls="navbar-collapse"
-                                    aria-expanded="false"
-                                    aria-label="Toggle navigation"
-                                >
-                                    <span></span>
-                                    <span></span>
-                                </button>
+    <AuthLayout>
+        <template #content>
+            <div class="main-content">
+                <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+                    <div class="container">
+                        <div class="header-body text-center mb-7">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+                                    <h1 class="text-white">Welcome!</h1>
+                                    <p class="text-lead text-white">
+                                        Use these awesome forms to login or
+                                        create new account in your project for
+                                        free.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <span class="nav-link-inner--text">Login</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <Link href="/register" class="nav-link">
-                                <span class="nav-link-inner--text"
-                                    >Register</span
-                                >
-                            </Link>
-                        </li>
-                    </ul>
-                    <hr class="d-lg-none" />
-                    <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link nav-link-icon"
-                                href="https://www.facebook.com/creativetim"
-                                target="_blank"
-                                data-toggle="tooltip"
-                                data-original-title="Like us on Facebook"
-                            >
-                                <i class="fab fa-facebook-square"></i>
-                                <span class="nav-link-inner--text d-lg-none"
-                                    >Facebook</span
-                                >
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link nav-link-icon"
-                                href="https://www.instagram.com/creativetimofficial"
-                                target="_blank"
-                                data-toggle="tooltip"
-                                data-original-title="Follow us on Instagram"
-                            >
-                                <i class="fab fa-instagram"></i>
-                                <span class="nav-link-inner--text d-lg-none"
-                                    >Instagram</span
-                                >
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link nav-link-icon"
-                                href="https://twitter.com/creativetim"
-                                target="_blank"
-                                data-toggle="tooltip"
-                                data-original-title="Follow us on Twitter"
-                            >
-                                <i class="fab fa-twitter-square"></i>
-                                <span class="nav-link-inner--text d-lg-none"
-                                    >Twitter</span
-                                >
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link nav-link-icon"
-                                href="https://github.com/creativetimofficial"
-                                target="_blank"
-                                data-toggle="tooltip"
-                                data-original-title="Star us on Github"
-                            >
-                                <i class="fab fa-github"></i>
-                                <span class="nav-link-inner--text d-lg-none"
-                                    >Github</span
-                                >
-                            </a>
-                        </li>
-                        <li class="nav-item d-none d-lg-block ml-lg-4">
-                            <a
-                                href="https://www.creative-tim.com/product/argon-dashboard-pro"
-                                target="_blank"
-                                class="btn btn-neutral btn-icon"
-                            >
-                                <span class="btn-inner--icon">
-                                    <i class="fas fa-shopping-cart mr-2"></i>
-                                </span>
-                                <span class="nav-link-inner--text"
-                                    >Purchase now</span
-                                >
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="main-content">
-            <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
-                <div class="container">
-                    <div class="header-body text-center mb-7">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-                                <h1 class="text-white">Welcome!</h1>
-                                <p class="text-lead text-white">
-                                    Use these awesome forms to login or create
-                                    new account in your project for free.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="separator separator-bottom separator-skew zindex-100"
-                >
-                    <svg
-                        x="0"
-                        y="0"
-                        viewBox="0 0 2560 100"
-                        preserveAspectRatio="none"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <div
+                        class="separator separator-bottom separator-skew zindex-100"
                     >
-                        <polygon
-                            class="fill-default"
-                            points="2560 0 2560 100 0 100"
-                        ></polygon>
-                    </svg>
+                        <svg
+                            x="0"
+                            y="0"
+                            viewBox="0 0 2560 100"
+                            preserveAspectRatio="none"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <polygon
+                                class="fill-default"
+                                points="2560 0 2560 100 0 100"
+                            ></polygon>
+                        </svg>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container mt--8 pb-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-7">
-                        <div class="card bg-secondary border-0 mb-0">
-                            <div class="card-header bg-transparent pb-5">
-                                <div class="text-muted text-center mt-2 mb-3">
-                                    <small>Sign in with</small>
-                                </div>
-                                <div class="btn-wrapper text-center">
-                                    <a
-                                        href="#"
-                                        class="btn btn-neutral btn-icon"
-                                    >
-                                        <span class="btn-inner--icon"
-                                            ><img
-                                                src="../../../src/img/icons/common/github.svg"
-                                                alt="Github icon"
-                                        /></span>
-                                        <span class="btn-inner--text"
-                                            >Github</span
-                                        >
-                                    </a>
-                                    <a
-                                        href="#"
-                                        class="btn btn-neutral btn-icon"
-                                    >
-                                        <span class="btn-inner--icon"
-                                            ><img
-                                                src="../../../src/img/icons/common/google.svg"
-                                                alt="Google icon"
-                                        /></span>
-                                        <span class="btn-inner--text"
-                                            >Google</span
-                                        >
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-body px-lg-5 py-lg-5">
-                                <div class="text-center text-muted mb-4">
-                                    <small>Or sign in with credentials</small>
-                                </div>
-                                <form @submit.prevent="submit">
-                                    <div class="form-group mb-3">
-                                        <div
-                                            class="input-group input-group-merge input-group-alternative"
-                                        >
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"
-                                                    ><i
-                                                        class="ni ni-email-83"
-                                                    ></i
-                                                ></span>
-                                            </div>
-                                            <TextInput
-                                                id="email"
-                                                type="email"
-                                                class="form-control"
-                                                v-model="form.email"
-                                                required
-                                                autofocus
-                                                placeholder="Email"
-                                            />
-                                        </div>
-                                        <InputError
-                                            :message="form.errors.email"
-                                        />
-                                    </div>
-                                    <div class="form-group">
-                                        <div
-                                            class="input-group input-group-merge input-group-alternative"
-                                        >
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"
-                                                    ><i
-                                                        class="ni ni-lock-circle-open"
-                                                    ></i
-                                                ></span>
-                                            </div>
-                                            <TextInput
-                                                id="password"
-                                                type="password"
-                                                class="form-control"
-                                                v-model="form.password"
-                                                required
-                                                placeholder="Password"
-                                            />
-                                        </div>
-                                        <InputError
-                                            :message="form.errors.password"
-                                        />
-                                    </div>
+                <div class="container mt--8 pb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-7">
+                            <div class="card bg-secondary border-0 mb-0">
+                                <div class="card-header bg-transparent pb-5">
                                     <div
-                                        class="custom-control custom-control-alternative custom-checkbox"
+                                        class="text-muted text-center mt-2 mb-3"
                                     >
-                                        <Checkbox
-                                            id="customCheckLogin"
-                                            v-model:checked="form.remember"
-                                            class="custom-control-input"
-                                        />
-                                        <label
-                                            class="custom-control-label"
-                                            for="customCheckLogin"
+                                        <small>Sign in with</small>
+                                    </div>
+                                    <div class="btn-wrapper text-center">
+                                        <a
+                                            href="#"
+                                            class="btn btn-neutral btn-icon"
                                         >
-                                            <span class="text-muted"
-                                                >Remember me</span
+                                            <span class="btn-inner--icon"
+                                                ><img
+                                                    src="../../../src/img/icons/common/github.svg"
+                                                    alt="Github icon"
+                                            /></span>
+                                            <span class="btn-inner--text"
+                                                >Github</span
                                             >
-                                        </label>
-                                    </div>
-                                    <div class="text-center">
-                                        <PrimaryButton
-                                            type="submit"
-                                            class="btn btn-primary my-4"
-                                            :class="{
-                                                'opacity-25': form.processing,
-                                            }"
-                                            :disabled="form.processing"
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="btn btn-neutral btn-icon"
                                         >
-                                            Log in
-                                        </PrimaryButton>
+                                            <span class="btn-inner--icon"
+                                                ><img
+                                                    src="../../../src/img/icons/common/google.svg"
+                                                    alt="Google icon"
+                                            /></span>
+                                            <span class="btn-inner--text"
+                                                >Google</span
+                                            >
+                                        </a>
                                     </div>
-                                </form>
+                                </div>
+                                <div class="card-body px-lg-5 py-lg-5">
+                                    <div class="text-center text-muted mb-4">
+                                        <small
+                                            >Or sign in with credentials</small
+                                        >
+                                    </div>
+                                    <form @submit.prevent="submit">
+                                        <div class="form-group mb-3">
+                                            <div
+                                                class="input-group input-group-merge input-group-alternative"
+                                            >
+                                                <div
+                                                    class="input-group-prepend"
+                                                >
+                                                    <span
+                                                        class="input-group-text"
+                                                        ><i
+                                                            class="ni ni-email-83"
+                                                        ></i
+                                                    ></span>
+                                                </div>
+                                                <TextInput
+                                                    id="email"
+                                                    type="email"
+                                                    class="form-control"
+                                                    v-model="form.email"
+                                                    required
+                                                    autofocus
+                                                    placeholder="Email"
+                                                />
+                                            </div>
+                                            <InputError
+                                                :message="form.errors.email"
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <div
+                                                class="input-group input-group-merge input-group-alternative"
+                                            >
+                                                <div
+                                                    class="input-group-prepend"
+                                                >
+                                                    <span
+                                                        class="input-group-text"
+                                                        ><i
+                                                            class="ni ni-lock-circle-open"
+                                                        ></i
+                                                    ></span>
+                                                </div>
+                                                <TextInput
+                                                    id="password"
+                                                    type="password"
+                                                    class="form-control"
+                                                    v-model="form.password"
+                                                    required
+                                                    placeholder="Password"
+                                                />
+                                            </div>
+                                            <InputError
+                                                :message="form.errors.password"
+                                            />
+                                        </div>
+                                        <div
+                                            class="custom-control custom-control-alternative custom-checkbox"
+                                        >
+                                            <Checkbox
+                                                id="customCheckLogin"
+                                                v-model:checked="form.remember"
+                                                class="custom-control-input"
+                                            />
+                                            <label
+                                                class="custom-control-label"
+                                                for="customCheckLogin"
+                                            >
+                                                <span class="text-muted"
+                                                    >Remember me</span
+                                                >
+                                            </label>
+                                        </div>
+                                        <div class="text-center">
+                                            <PrimaryButton
+                                                type="submit"
+                                                class="btn btn-primary my-4"
+                                                :class="{
+                                                    'opacity-25':
+                                                        form.processing,
+                                                }"
+                                                :disabled="form.processing"
+                                            >
+                                                Log in
+                                            </PrimaryButton>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-6">
-                                <Link
-                                    href="route('password.request')"
-                                    class="text-light"
-                                    ><small>Forgot password?</small></Link
-                                >
-                            </div>
-                            <div class="col-6 text-right">
-                                <Link href="#" class="text-light"
-                                    ><small>Create new account</small></Link
-                                >
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <Link
+                                        href="route('password.request')"
+                                        class="text-light"
+                                        ><small>Forgot password?</small></Link
+                                    >
+                                </div>
+                                <div class="col-6 text-right">
+                                    <Link href="#" class="text-light"
+                                        ><small>Create new account</small></Link
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <footer class="py-5" id="footer-main">
-            <div class="container">
-                <div class="row align-items-center justify-content-xl-between">
-                    <div class="col-xl-6">
-                        <div
-                            class="copyright text-center text-xl-left text-muted"
-                        >
-                            &copy; 2021
-                            <a
-                                href="https://www.creative-tim.com"
-                                class="font-weight-bold ml-1"
-                                target="_blank"
-                                >Creative Tim</a
-                            >
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <ul
-                            class="nav nav-footer justify-content-center justify-content-xl-end"
-                        >
-                            <li class="nav-item">
-                                <a
-                                    href="https://www.creative-tim.com"
-                                    class="nav-link"
-                                    target="_blank"
-                                    >Creative Tim</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    href="https://www.creative-tim.com/presentation"
-                                    class="nav-link"
-                                    target="_blank"
-                                    >About Us</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    href="http://blog.creative-tim.com"
-                                    class="nav-link"
-                                    target="_blank"
-                                    >Blog</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    href="https://www.creative-tim.com/license"
-                                    class="nav-link"
-                                    target="_blank"
-                                    >License</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+        </template>
+    </AuthLayout>
 </template>
 <style scoped></style>
